@@ -1,0 +1,5 @@
+#!/bin/sh
+if ! git log -1 --pretty=%G? | grep -q 'G'; then
+  echo "ERROR: Commit is not signed! Please sign your commit."
+  exit 1
+fi
